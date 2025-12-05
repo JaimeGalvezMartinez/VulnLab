@@ -1,65 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal Hacker - Máquina Vulnerable</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Máquina Virtual de Ciberseguridad - Vulnerabilidades</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="terminal">
+    <header class="terminal-output">
+        <p><span class="prompt">$</span> cat README.md</p>
+        <h1>Máquina Virtual de Ciberseguridad</h1>
+        <h2>Análisis de Vulnerabilidades Detectadas</h2>
+    </header>
 
-    <!-- BIENVENIDOS en rojo llamativo -->
-    <h1 class="bienvenida">BIENVENIDOS</h1>
-<br>
-    <!-- TÍTULO PRINCIPAL -->
-    <h2 class="title-red">root@proyecto:~# Proyecto de Máquina Vulnerable</h2>
-    <p>Máquina creada para prácticas educativas de ciberseguridad.</p>
+    <main class="terminal-output">
+        <p><span class="prompt">$</span> ls -l /vulnerabilidades</p>
+        <p class="file-entry">Total: 5 vulnerabilidades significativas encontradas.</p>
+        
+        <ul class="vulnerability-list">
+            <li>
+                <span class="file-entry">[ALTO]</span> <strong>Ataques de Diccionario</strong>
+                <p class="description">Permite a un atacante intentar una gran cantidad de contraseñas predefinidas.</p>
+            </li>
+            <li>
+                <span class="file-entry">[ALTO]</span> <strong>Ataques de Denegación de Servicio (DoS)</strong>
+                <p class="description">Incluido para el aprendizaje de técnicas de defensa y ejecución. (Nota: No es una vulnerabilidad de software per se, sino una técnica de ataque incluida para la práctica).</p>
+            </li>
+            <li>
+                <span class="file-entry">[ALTO]</span> <strong>Inyección de SQL y Exposición de Contraseñas</strong>
+                <p class="description">La aplicación es vulnerable a Inyección de SQL, permitiendo la extracción de datos sensibles, incluyendo contraseñas.</p>
+            </li>
+            <li>
+                <span class="file-entry">[ALTO]</span> <strong>Exposición de Información Sensible</strong>
+                <p class="description">Ciertos datos confidenciales (configuraciones, rutas, etc.) son accesibles sin la debida autenticación o protección.</p>
+            </li>
+            <li>
+                <span class="file-entry">[ALTO]</span> <strong>Vulnerabilidad en el Almacenamiento de Contraseñas</strong>
+                <p class="description">Las contraseñas no se almacenan de forma segura (e.g., hash débil o sin salting), facilitando su descifrado.</p>
+            </li>
+        </ul>
 
-    <h2 class="title-red">root@proyecto:~# Descripción</h2>
-    <p>
-        Esta máquina vulnerable es un entorno diseñado para analizar, detectar y defenderse 
-        de vulnerabilidades en un entorno educativo controlado.
-    </p>
+        <p><span class="prompt">$</span> exit</p>
+        <p class="file-entry">Cerrando sesión. ¡Que disfrutes la auditoría!</p>
+    </main>
 
-    <h2 class="title-red">root@proyecto:~# Descargas (VirtualBox)</h2>
-
-    <div class="buttons">
-        <a class="btn" href="ENLACE-A-TU-MAQUINA" download>
-            ./descargar_maquina_vulnerable.sh
-        </a>
-
-        <a class="btn" href="ENLACE-A-TU-CLIENTE" download>
-            ./descargar_cliente.sh
-        </a>
-    </div>
-
-    <p>
-        Necesitas VirtualBox instalado para ejecutarlas:  
-        <a class="link" href="https://www.virtualbox.org/" target="_blank">
-            https://www.virtualbox.org/
-        </a>
-    </p>
-
-    <h2 class="title-red">root@proyecto:~# Vulnerabilidades Incluidas</h2>
-    <ul>
-        <li>Riesgo alto — Ataques de diccionario</li>
-        <li>Riesgo alto — Denegación de servicio (DoS)</li>
-        <li>Riesgo alto — Inyección SQL y exposición de credenciales</li>
-        <li>Riesgo alto — Exposición de información sensible</li>
-        <li>Riesgo alto — Gestión insegura de contraseñas</li>
-    </ul>
-
-    <h2 class="title-red">root@proyecto:~# Repositorio</h2>
-    <p class="code">
-        https://github.com/TU-USUARIO/TU-REPO
-    </p>
-
-    <p class="cursor">root@proyecto:~# █</p>
-
-</div>
+    <footer class="terminal-output">
+        <p><span class="prompt">$</span> _</p>
+    </footer>
 
 </body>
 </html>
