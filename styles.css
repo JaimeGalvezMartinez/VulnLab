@@ -1,28 +1,31 @@
 body {
-    font-family: Arial, sans-serif;
+    background: #000;
+    color: #00ff55;
+    font-family: "Courier New", monospace;
     margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    padding: 20px;
 }
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-section {
-    padding: 20px;
+.terminal {
     max-width: 900px;
     margin: auto;
-    background: #fff;
 }
 
-h2 {
-    border-left: 5px solid #0078ff;
-    padding-left: 10px;
+h1, h2, p, li {
+    color: #00ff55;
+}
+
+a {
+    color: #00ff55;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #33ff88;
+}
+
+.link {
+    color: #33ff88;
 }
 
 .buttons {
@@ -34,34 +37,29 @@ h2 {
 
 .btn {
     display: inline-block;
-    background: #0078ff;
-    color: white;
-    padding: 12px 20px;
+    border: 1px solid #00ff55;
+    padding: 10px;
     text-decoration: none;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
+    color: #00ff55;
+    border-radius: 5px;
+    width: fit-content;
 }
 
 .btn:hover {
-    background: #005fcc;
-}
-
-.note {
-    margin-top: 10px;
-    font-size: 0.95em;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
-    margin-top: 20px;
+    background: #003300;
 }
 
 .code {
-    background: #eee;
+    background: #001900;
     padding: 10px;
-    border-radius: 5px;
-    font-family: monospace;
+    border-left: 3px solid #00ff55;
+}
+
+.cursor {
+    font-weight: bold;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
