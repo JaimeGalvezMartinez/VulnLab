@@ -1,82 +1,84 @@
+/* Importar una fuente monoespaciada para simular mejor la terminal */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Estilos Globales */
 body {
-    background: #000000;
-    color: #00ff41;
-    font-family: "Courier New", monospace;
-    margin: 0;
+    background-color: #1a1a1a; /* Fondo negro muy oscuro */
+    color: #00ff00; /* Texto verde brillante de terminal */
+    font-family: 'Roboto Mono', monospace; /* Fuente monoespaciada */
     padding: 20px;
+    margin: 0;
+    line-height: 1.5; /* Espaciado para mayor legibilidad */
 }
 
-.terminal {
-    max-width: 900px;
-    margin: auto;
+/* Contenedores de Salida de Terminal */
+.terminal-output {
+    margin-bottom: 20px;
+    border: 1px solid #00ff00; /* Borde sutil para simular el marco de la terminal */
+    padding: 15px;
+    background-color: #0d0d0d; /* Un negro ligeramente más claro para el contenido */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Sombra de brillo verde */
 }
 
-/* BIENVENIDOS rojo grande llamativo */
-.bienvenida {
-    color: #ff1e1e;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 30px;
-    text-shadow: 0 0 10px #ff1e1e;
+/* Títulos */
+h1, h2 {
+    color: #00ffff; /* Color cian para los títulos/comandos principales */
+    text-transform: uppercase;
+    border-bottom: 1px dashed #00ff00;
+    padding-bottom: 5px;
 }
 
-/* Títulos tipo root@proyecto */
-.title-red {
-    color: #ff3131;
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+/* Prompt de la terminal */
+.prompt {
+    color: #ffff00; /* Amarillo para el signo de dólar o prompt */
+    margin-right: 8px;
     font-weight: bold;
 }
 
-ul li {
-    color: #00ff41;
+/* Entrada de Archivos/Datos (para resultados de ls) */
+.file-entry {
+    color: #ffffff; /* Blanco para resultados o información */
+    display: block; /* Asegura que el color se aplique a todo el bloque */
+    margin-top: 5px;
 }
 
-a {
-    color: #00ff41;
-    text-decoration: underline;
+/* Lista de Vulnerabilidades */
+.vulnerability-list {
+    list-style-type: '⚡ '; /* Usar un rayo como viñeta, o '-> ' si lo prefieres */
+    padding-left: 20px;
 }
 
-a:hover {
-    color: #ff3131;
+.vulnerability-list li {
+    margin-bottom: 15px;
+    padding: 5px;
+    border-left: 3px solid #ff0000; /* Borde rojo para destacar el riesgo alto */
 }
 
-.link {
-    color: #00ff41;
+.vulnerability-list li strong {
+    color: #ff0000; /* Rojo brillante para el nombre de la vulnerabilidad */
+    font-size: 1.1em;
 }
 
-.buttons {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.vulnerability-list li .description {
+    color: #aaaaaa; /* Gris claro para el texto explicativo */
+    margin-left: 10px;
+    font-style: italic;
 }
 
-.btn {
-    display: inline-block;
-    border: 1px solid #ff3131;
-    padding: 10px;
-    text-decoration: none;
-    color: #00ff41;
-    border-radius: 5px;
-    width: fit-content;
-}
-
-.btn:hover {
-    background: #1a0000;
-    color: #ff3131;
-}
-
-.code {
-    background: #001100;
-    padding: 10px;
-    border-left: 3px solid #ff3131;
-}
-
-.cursor {
-    font-weight: bold;
-    color: #00ff41;
-    animation: blink 1s steps(1) infinite;
+/* Cursor parpadeante en el footer */
+footer .prompt {
+    animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    from, to { visibility: hidden; }
+    50% { visibility: visible; }
 }
