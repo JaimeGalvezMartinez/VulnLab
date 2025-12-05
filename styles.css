@@ -1,6 +1,6 @@
 body {
-    background: #000;
-    color: #00ff55;
+    background: #000000;
+    color: #00ff41; /* verde terminal */
     font-family: "Courier New", monospace;
     margin: 0;
     padding: 20px;
@@ -11,21 +11,21 @@ body {
     margin: auto;
 }
 
-h1, h2, p, li {
-    color: #00ff55;
+.title-red {
+    color: #ff3131; /* rojo alerta */
+}
+
+ul li {
+    color: #00ff41;
 }
 
 a {
-    color: #00ff55;
+    color: #00ff41;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #33ff88;
-}
-
-.link {
-    color: #33ff88;
+    color: #ff3131;
 }
 
 .buttons {
@@ -37,26 +37,28 @@ a:hover {
 
 .btn {
     display: inline-block;
-    border: 1px solid #00ff55;
+    border: 1px solid #ff3131;
     padding: 10px;
     text-decoration: none;
-    color: #00ff55;
+    color: #00ff41;
     border-radius: 5px;
     width: fit-content;
 }
 
 .btn:hover {
-    background: #003300;
+    background: #1a0000;
+    color: #ff3131;
 }
 
 .code {
-    background: #001900;
+    background: #001100;
     padding: 10px;
-    border-left: 3px solid #00ff55;
+    border-left: 3px solid #ff3131;
 }
 
 .cursor {
     font-weight: bold;
+    color: #00ff41;
     animation: blink 1s steps(1) infinite;
 }
 
