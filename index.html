@@ -1,136 +1,132 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto de Máquina Vulnerable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina Vulnerable - Proyecto Hacker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
+        /* --- GENERAL --- */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #0f0f0f;
+            color: #00ff00;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
-            color: #333;
         }
         header {
-            background: #222;
-            color: #fff;
+            background-color: #111;
+            color: #00ff00;
             padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #00ff00;
         }
         section {
-            padding: 20px;
             max-width: 900px;
             margin: auto;
-            background: #fff;
+            padding: 20px;
         }
         h2 {
-            border-left: 5px solid #0078ff;
+            color: #00ff00;
+            border-left: 5px solid #00ff00;
             padding-left: 10px;
+            margin-top: 30px;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #ddd;
-            margin-top: 20px;
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li::before {
+            content: "» ";
+            color: #00ff00;
+        }
+        p, li {
+            line-height: 1.6;
         }
         .code {
-            background: #eee;
+            background-color: #111;
+            color: #00ff00;
             padding: 10px;
             border-radius: 5px;
-            font-family: monospace;
+            font-family: 'Share Tech Mono', monospace;
         }
 
-        /* --- Botones de descarga --- */
+        /* --- BOTONES --- */
         .download-container {
             text-align: center;
             margin: 30px 0;
         }
         .download-btn {
-            background: #0078ff;
-            color: white;
+            background: #111;
+            color: #00ff00;
+            border: 2px solid #00ff00;
             padding: 15px 25px;
-            border-radius: 8px;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 18px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 16px;
             font-weight: bold;
             display: inline-block;
             margin: 10px;
-            transition: background 0.3s;
+            transition: all 0.3s;
         }
         .download-btn:hover {
-            background: #005fcc;
+            background: #00ff00;
+            color: #111;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #00ff00;
+            margin-top: 30px;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Proyecto de Máquina Vulnerable</h1>
-    <p>Máquina creada para prácticas educativas de ciberseguridad</p>
+    <h1>💻 Proyecto Máquina Vulnerable</h1>
+    <p>Entorno seguro de ciberseguridad educativa</p>
 </header>
 
 <section>
+
     <h2>Requisitos</h2>
-    <p>
-        Esta máquina vulnerable ha sido creada en <strong>VirtualBox</strong>.  
-        Por lo tanto, es necesario tener instalado VirtualBox para poder ejecutarla.
-    </p>
+    <p>Esta máquina está hecha en <strong>VirtualBox</strong>. Debes tener instalado VirtualBox para ejecutar las máquinas.</p>
 
     <h2>Configuración de Red</h2>
-    <p>
-        Para que el entorno funcione correctamente, es necesario usar dos máquinas:
-    </p>
-
-    <ul>
-        <li>🛡️ <strong>Máquina Vulnerable</strong></li>
-        <li>💻 <strong>Cliente de pruebas</strong></li>
-    </ul>
-
-    <p>
-        La máquina vulnerable está diseñada para ser analizada y atacada desde el cliente.
-    </p>
-
-    <p>
-        Ambas máquinas deben estar conectadas en la misma <strong>red interna</strong> de VirtualBox, 
-        configurada con el siguiente segmento:
-    </p>
-
+    <p>La máquina vulnerable se penetra desde el cliente. Ambas máquinas deben estar en <strong>red interna</strong>:</p>
     <p class="code">10.33.206.0/24</p>
+    <p>Esto permite pruebas seguras y controladas dentro del entorno educativo.</p>
 
-    <p>
-        De esta manera, el cliente podrá comunicarse con la máquina vulnerable en un entorno aislado y seguro,
-        ideal para prácticas educativas.
-    </p>
-
-    <h2>Descripción</h2>
-    <p>
-        Esta máquina vulnerable fue creada con fines educativos para clases de ciberseguridad.
-        Permite practicar análisis, hardening, detección de vulnerabilidades y técnicas defensivas.
-    </p>
-
-    <h2>Vulnerabilidades incluidas para aprendizaje</h2>
-    <p>La máquina contiene vulnerabilidades simuladas de alto riesgo, entre ellas:</p>
-
+    <h2>Vulnerabilidades incluidas</h2>
     <ul>
-        <li><strong>Riesgo alto — Ataques de diccionario</strong>: contraseñas débiles.</li>
-        <li><strong>Riesgo alto — Denegación de servicio (DoS)</strong>: saturación de recursos.</li>
-        <li><strong>Riesgo alto — Inyección SQL</strong>: validación deficiente.</li>
-        <li><strong>Riesgo alto — Exposición de información sensible</strong>: ficheros inseguros.</li>
-        <li><strong>Riesgo alto — Vulnerabilidades en contraseñas</strong>: hashes débiles, claves por defecto.</li>
+        <li>Riesgo alto — Ataques de diccionario (contraseñas débiles)</li>
+        <li>Riesgo alto — Denegación de servicio (DoS)</li>
+        <li>Riesgo alto — Inyección SQL</li>
+        <li>Riesgo alto — Exposición de información sensible</li>
+        <li>Riesgo alto — Vulnerabilidades en contraseñas (hashes débiles, por defecto)</li>
     </ul>
 
     <h2>Descargas</h2>
     <p>Puedes descargar las máquinas aquí:</p>
-
     <div class="download-container">
         <a class="download-btn" href="URL-MAQUINA" target="_blank">
-            📥 Descargar Máquina Vulnerable (VirtualBox)
+            📥 Máquina Vulnerable (VirtualBox)
         </a>
-
         <a class="download-btn" href="URL-CLIENTE" target="_blank">
-            💻 Descargar Cliente
+            💻 Cliente de Pruebas
         </a>
     </div>
 
@@ -143,7 +139,7 @@
 </section>
 
 <footer>
-    © 2025 - Proyecto de Ciberseguridad Educativa
+    © 2025 - Proyecto Hacker Educativo
 </footer>
 
 </body>
