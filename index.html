@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Máquina Vulnerable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+        }
+        h2 {
+            border-left: 5px solid #0078ff;
+            padding-left: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+            margin-top: 20px;
+        }
+        .code {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+
+        /* --- Botones de descarga --- */
+        .download-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .download-btn {
+            background: #0078ff;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background: #005fcc;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Proyecto de Máquina Vulnerable</h1>
+    <p>Máquina creada para prácticas educativas de ciberseguridad</p>
+</header>
+
+<section>
+    <h2>Requisitos</h2>
+    <p>
+        Esta máquina vulnerable ha sido creada en <strong>VirtualBox</strong>.  
+        Por lo tanto, es necesario tener instalado VirtualBox para poder ejecutarla.
+    </p>
+
+    <h2>Configuración de Red</h2>
+    <p>
+        Para que el entorno funcione correctamente, es necesario usar dos máquinas:
+    </p>
+
+    <ul>
+        <li>🛡️ <strong>Máquina Vulnerable</strong></li>
+        <li>💻 <strong>Cliente de pruebas</strong></li>
+    </ul>
+
+    <p>
+        La máquina vulnerable está diseñada para ser analizada y atacada desde el cliente.
+    </p>
+
+    <p>
+        Ambas máquinas deben estar conectadas en la misma <strong>red interna</strong> de VirtualBox, 
+        configurada con el siguiente segmento:
+    </p>
+
+    <p class="code">10.33.206.0/24</p>
+
+    <p>
+        De esta manera, el cliente podrá comunicarse con la máquina vulnerable en un entorno aislado y seguro,
+        ideal para prácticas educativas.
+    </p>
+
+    <h2>Descripción</h2>
+    <p>
+        Esta máquina vulnerable fue creada con fines educativos para clases de ciberseguridad.
+        Permite practicar análisis, hardening, detección de vulnerabilidades y técnicas defensivas.
+    </p>
+
+    <h2>Vulnerabilidades incluidas para aprendizaje</h2>
+    <p>La máquina contiene vulnerabilidades simuladas de alto riesgo, entre ellas:</p>
+
+    <ul>
+        <li><strong>Riesgo alto — Ataques de diccionario</strong>: contraseñas débiles.</li>
+        <li><strong>Riesgo alto — Denegación de servicio (DoS)</strong>: saturación de recursos.</li>
+        <li><strong>Riesgo alto — Inyección SQL</strong>: validación deficiente.</li>
+        <li><strong>Riesgo alto — Exposición de información sensible</strong>: ficheros inseguros.</li>
+        <li><strong>Riesgo alto — Vulnerabilidades en contraseñas</strong>: hashes débiles, claves por defecto.</li>
+    </ul>
+
+    <h2>Descargas</h2>
+    <p>Puedes descargar las máquinas aquí:</p>
+
+    <div class="download-container">
+        <a class="download-btn" href="URL-MAQUINA" target="_blank">
+            📥 Descargar Máquina Vulnerable (VirtualBox)
+        </a>
+
+        <a class="download-btn" href="URL-CLIENTE" target="_blank">
+            💻 Descargar Cliente
+        </a>
+    </div>
+
+    <h2>Repositorio</h2>
+    <p>Accede al proyecto completo en GitHub:</p>
+    <p class="code">
+        https://github.com/TU-USUARIO/TU-REPO
+    </p>
+
+</section>
+
+<footer>
+    © 2025 - Proyecto de Ciberseguridad Educativa
+</footer>
+
+</body>
+</html>
