@@ -1,34 +1,87 @@
 /* Importar una fuente monoespaciada para simular mejor la terminal */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
-/* Estilo base para el botón visual */
+/*
+ * EJEMPLO DE CÓDIGO CSS (styles.css)
+ * para los botones visuales con estilo moderno.
+ */
+
+/* Estilo base para todos los botones de descarga */
 .visual-button {
-    /* Convierte el enlace en un bloque para que se comporte como un botón */
+    /* Convierte el enlace en un bloque para el diseño */
     display: inline-block;
-    padding: 10px 15px;
-    margin: 10px 5px;
+    padding: 12px 25px;
+    margin: 15px 10px;
     
-    /* Apariencia */
-    background-color: #4CAF50; /* Un verde de éxito */
-    color: #000; /* Texto negro para contraste */
-    text-decoration: none; /* Quita el subrayado típico del enlace */
-    border: 2px solid #000;
+    /* Apariencia de botón */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 700;
     cursor: pointer;
     
-    /* Fuente tipo terminal */
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-weight: bold;
-    font-size: 1em;
-    
-    /* Pequeña sombra para simular el estilo retro */
-    box-shadow: 2px 2px 0px #000;
+    /* Sombra sutil para profundidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Animación (transición) */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
 }
 
-/* Efecto hover (al pasar el ratón) */
+/* Efecto Hover (al pasar el ratón) */
 .visual-button:hover {
-    background-color: #45a049;
-    box-shadow: 1px 1px 0px #000; /* Efecto de "presionado" */
-    transform: translate(1px, 1px);
+    transform: translateY(-2px); /* Eleva el botón ligeramente */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+}
+
+/* --- ESTILOS DE COLOR ESPECÍFICOS --- */
+
+/* Botón de Máquina Vulnerable (Énfasis en precaución/peligro) */
+.vulnerable-button {
+    background-color: #e74c3c; /* Rojo brillante */
+    color: white;
+}
+
+.vulnerable-button:hover {
+    background-color: #c0392b; 
+}
+
+/* Botón de Máquina Atacante (Énfasis en la acción/azul) */
+.attacker-button {
+    background-color: #3498db; /* Azul */
+    color: white;
+}
+
+.attacker-button:hover {
+    background-color: #2980b9;
+}
+
+/* Botón de VirtualBox (Enlace externo/verde) */
+.vbox-link {
+    background-color: #2ecc71; /* Verde */
+    color: white;
+}
+
+.vbox-link:hover {
+    background-color: #27ae60;
+}
+
+
+/* --- Mantenemos el estilo de terminal para el resto del contenido --- */
+
+.terminal-output {
+    /* Ejemplo de estilo oscuro y monocromático */
+    background-color: #1c1c1c;
+    color: #00ff00;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    font-family: 'Consolas', 'Courier New', monospace;
+    margin-bottom: 20px;
+}
+
+.prompt {
+    color: #ff00ff;
 }
 
 /* Estilos Globales */
