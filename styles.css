@@ -1,6 +1,36 @@
 /* Importar una fuente monoespaciada para simular mejor la terminal */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
+/* Estilo base para el botón visual */
+.visual-button {
+    /* Convierte el enlace en un bloque para que se comporte como un botón */
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    
+    /* Apariencia */
+    background-color: #4CAF50; /* Un verde de éxito */
+    color: #000; /* Texto negro para contraste */
+    text-decoration: none; /* Quita el subrayado típico del enlace */
+    border: 2px solid #000;
+    cursor: pointer;
+    
+    /* Fuente tipo terminal */
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1em;
+    
+    /* Pequeña sombra para simular el estilo retro */
+    box-shadow: 2px 2px 0px #000;
+}
+
+/* Efecto hover (al pasar el ratón) */
+.visual-button:hover {
+    background-color: #45a049;
+    box-shadow: 1px 1px 0px #000; /* Efecto de "presionado" */
+    transform: translate(1px, 1px);
+}
+
 /* Estilos Globales */
 body {
     background-color: #1a1a1a; /* Fondo negro muy oscuro */
