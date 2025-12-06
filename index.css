@@ -1,3 +1,20 @@
+/* --- Estilos para la Dificultad --- */
+
+.difficulty-level {
+    color: #ffaa00; /* Color naranja/amarillo para la etiqueta de Dificultad */
+    font-size: 1.1em;
+    padding-left: 10px;
+    margin-top: -10px; /* Acercar a la línea de comando */
+    margin-bottom: 20px;
+}
+
+.difficulty-level .red-glow {
+    color: #ff3366; /* Color rojo neón para la palabra 'Dificil' */
+    text-shadow: 0 0 5px #ff3366, 0 0 10px rgba(255, 51, 102, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 /* --- 1. Estilos Base y Fondo de Terminal --- */
 body {
     background-color: #0d1117; /* Fondo muy oscuro (casi negro) */
