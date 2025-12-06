@@ -1,0 +1,215 @@
+/* --- 1. Estilos Base y Fondo de Terminal --- */
+body {
+    background-color: #0d1117; /* Fondo muy oscuro (casi negro) */
+    color: #00ff41; /* Color de texto base (verde neón) */
+    font-family: 'Consolas', 'Monospace', monospace; /* Fuente de estilo terminal */
+    padding: 20px;
+    margin: 0;
+    /* Un ligero resplandor global en el fondo para el efecto de neón */
+    box-shadow: inset 0 0 100px rgba(0, 255, 65, 0.05); 
+}
+
+/* Encabezados de salida de terminal y secciones */
+.terminal-output {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    /* Centra el contenido principal (botones, comandos) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: left; /* Mantiene el texto de los comandos a la izquierda del contenedor */
+    width: 90%; /* Limita el ancho para que se vea como una ventana de terminal */
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Indicador de Prompt ($) */
+.prompt {
+    color: #33ccff; /* Azul brillante para el prompt */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Estilo para los títulos de la página (README.md) */
+h1, h2 {
+    color: #fff; /* Títulos en blanco o cian */
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    padding-left: 10px;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 22px; color: #33ccff; } /* Los subtítulos de sección son cian */
+
+/* Asegura que el texto fuera de main se alinee a la izquierda (como la descripción) */
+section {
+    width: 90%; 
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Separador horizontal (<hr> en el HTML) */
+hr {
+    border: none;
+    border-top: 1px dashed #444;
+    width: 100%;
+    margin: 30px 0;
+}
+
+/* --- 2. Contenedor y Botones (Estilo Hacker Vertical) --- */
+
+.container-downloads {
+    /* Clave para el apilamiento vertical: */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    /* Centra los botones en el contenedor */
+    gap: 15px;              /* Espacio vertical entre los botones */
+    margin: 20px 0;
+    width: 100%;
+}
+
+.hacker-btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 5px currentColor;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    min-width: 300px; /* Asegura un ancho uniforme */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efecto Hover (al pasar el ratón) */
+.hacker-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px currentColor, 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* --- 3. Esquemas de Color de Neón --- */
+
+/* Botón Rojo (Vulnerable) */
+.red-glitch {
+    color: #ff3366; 
+    box-shadow: 0 0 15px #ff3366, inset 0 0 5px #ff3366; 
+}
+
+/* Botón Azul (Atacante) */
+.blue-glitch {
+    color: #33ccff; 
+    box-shadow: 0 0 15px #33ccff, inset 0 0 5px #33ccff; 
+}
+
+/* Botón Verde (VirtualBox) */
+.green-glitch {
+    color: #00ff41; 
+    box-shadow: 0 0 15px #00ff41, inset 0 0 5px #00ff41; 
+}
+
+/* Texto informativo con resplandor verde */
+.info-text.green-glow {
+    text-align: center;
+    font-size: 1.1em;
+    padding: 10px 0;
+    text-shadow: 0 0 5px #00ff41, 0 0 10px rgba(0, 255, 65, 0.5); 
+}
+
+
+/* --- 4. Estilos de Instrucciones y Listas de Vulnerabilidades --- */
+
+.instructions-section {
+    width: 100%;
+    text-align: left;
+    border: 1px dashed #444; 
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.instructions-section ol, .instructions-section ul {
+    margin-left: 20px;
+}
+
+/* Lista de Vulnerabilidades */
+.vulnerability-list {
+    list-style: none; 
+    padding: 0;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.vulnerability-list li {
+    background-color: rgba(0, 0, 0, 0.3); 
+    padding: 10px;
+    border-left: 3px solid #ff3366; 
+    margin-bottom: 15px;
+}
+
+.vulnerability-list strong {
+    color: #ff3366; 
+    text-shadow: 0 0 3px #ff3366;
+}
+
+.vulnerability-list p.description {
+    color: #ccc; 
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.file-entry {
+    color: #ffaa00; /* Texto de salida de comandos en naranja/amarillo */
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* --- 5. Animación Glitch (Efecto de Distorsión) --- */
+
+.hacker-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    animation: glitch-anim 6s infinite linear alternate;
+}
+
+/* Estilos específicos para la animación según el color */
+.red-glitch::before { border: 3px solid #ff3366; }
+.blue-glitch::before { border: 3px solid #33ccff; }
+.green-glitch::before { border: 3px solid #00ff41; }
+
+@keyframes glitch-anim {
+    0% { opacity: 0.8; transform: translate(1px, -1px); }
+    10% { opacity: 0; transform: translate(0); }
+    20% { opacity: 0.5; transform: translate(-1px, 2px); }
+    30% { opacity: 0; }
+    40% { opacity: 0.9; transform: translate(2px, 1px); }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* --- 6. Estilo del Footer --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 10px;
+    border-top: 1px dashed #444;
+    color: #aaa;
+    font-size: 0.9em;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+}
