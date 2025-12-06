@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,95 +16,88 @@
     </header>
 
     <section>
-    <h2>Descripción</h2>
-    <p>
-        Esta máquina vulnerable fue creada con fines educativos para clases de ciberseguridad. 
-        Su objetivo es permitir que los estudiantes practiquen análisis, hardening, detección de 
-        vulnerabilidades y técnicas defensivas.
-    </p>
+        <h2>Descripción</h2>
+        <p>
+            Esta máquina vulnerable fue creada con fines educativos para clases de ciberseguridad. 
+            Su objetivo es permitir que los estudiantes practiquen análisis, hardening, detección de 
+            vulnerabilidades y técnicas defensivas.
+        </p>
 
-    <main class="terminal-output">
-        
-
-             <p><span class="prompt">$</span>find / -type f -name "descargas_de_maquinas_virtuales_para_virtualbox.txt" 2>/dev/null</p>
-
-
-                --------------------------------------------------------------------------------------------------------------------
-
+        <main class="terminal-output">
             
-            <a href="#" class="btn hacker-btn red-glitch">
-            <span class="icon">⬇️</span>
-            wget maquina_vulnerable.deb
-        </a>
-
-            --------------------------
-
-        <a href="#" class="btn hacker-btn blue-glitch">
-            <span class="icon">⬇️</span>
-            wget maquina_atacante.deb
-        </a>
-
-    <p class="info-text green-glow">
-        Necesitarás VirtualBox para ejecutar estas máquinas.
-    </p>
-
-    <a href="#" class="btn hacker-btn green-glitch single-btn">
-        <span class="icon">🔗</span>
-        wget virtualbox
-    </a>
+            <p><span class="prompt">$</span> find / -type f -name "descargas_de_maquinas_virtuales_para_virtualbox.txt" 2>/dev/null</p>
             
-        
+            <div class="container-downloads">
+                <a href="#" class="btn hacker-btn red-glitch">
+                    <span class="icon">⬇️</span>
+                    wget maquina_vulnerable.deb
+                </a>
 
-        
-        ---
+                <a href="#" class="btn hacker-btn blue-glitch">
+                    <span class="icon">⬇️</span>
+                    wget maquina_atacante.deb
+                </a>
 
-        <div class="instructions-section">
-            <h2>Instrucciones de Configuración</h2>
-            <p><span class="prompt">$</span> cat network_setup.txt</p>
-            <p>Para que el laboratorio funcione correctamente, sigue estos pasos:</p>
-            <ol>
-                <li>Importa ambas máquinas (*.deb) en **VirtualBox**.</li>
-                <li>En la configuración de red de ambas máquinas, selecciona el modo **Red Interna** (Internal Network).</li>
-                <li>Asegúrate de que ambas máquinas están configuradas con las siguientes IPs estáticas **dentro del sistema operativo**:</li>
-                <ul>
-                    <li>**Máquina Vulnerable:** IP: **10.33.206.2**</li>
-                    <li>**Máquina Atacante:** IP: **10.33.206.10**</li>
-                </ul>
-                <li>Una vez configuradas, la Máquina Atacante debería poder hacer ping a la Máquina Vulnerable.</li>
-            </ol>
-        </div>
+                <p class="info-text green-glow">
+                    Necesitarás VirtualBox para ejecutar estas máquinas.
+                </p>
 
-        ---
-        
-        <p><span class="prompt">$</span> ls -l /vulnerabilidades</p>
-        <p class="file-entry">Total: 5 vulnerabilidades significativas encontradas.</p>
-        
-        <ul class="vulnerability-list">
-            <li>
-                <span class="file-entry">[ALTO]</span> <strong>Ataques de Diccionario</strong>
-                <p class="description">Permite a un atacante intentar una gran cantidad de contraseñas predefinidas.</p>
-            </li>
-            <li>
-                <span class="file-entry">[ALTO]</span> <strong>Ataques de Denegación de Servicio (DoS)</strong>
-                <p class="description">Incluido para el aprendizaje de técnicas de defensa y ejecución. (Nota: No es una vulnerabilidad de software per se, sino una técnica de ataque incluida para la práctica).</p>
-            </li>
-            <li>
-                <span class="file-entry">[ALTO]</span> <strong>Inyección de SQL y Exposición de Contraseñas</strong>
-                <p class="description">La aplicación es vulnerable a Inyección de SQL, permitiendo la extracción de datos sensibles, incluyendo contraseñas.</p>
-            </li>
-            <li>
-                <span class="file-entry">[ALTO]</span> <strong>Exposición de Información Sensible Por listado de subdirectorios</strong>
-                <p class="description">Ciertos datos confidenciales (configuraciones, rutas, etc.) son accesibles sin la debida autenticación o protección.</p>
-            </li>
-            <li>
-                <span class="file-entry">[ALTO]</span><strong>Usar la misma contraseña para múltiples servicios <strong></strong>
-                <p class="description">Las contraseñas se repiten para cada servicio (Wordpress, DVWA etc........) </p>
-            </li>
-        </ul>
+                <a href="#" class="btn hacker-btn green-glitch">
+                    <span class="icon">🔗</span>
+                    wget virtualbox
+                </a>
+            </div>
+            
+            <hr>
+            
+            <div class="instructions-section">
+                <h2>Instrucciones de Configuración</h2>
+                <p><span class="prompt">$</span> cat network_setup.txt</p>
+                <p>Para que el laboratorio funcione correctamente, sigue estos pasos:</p>
+                <ol>
+                    <li>Importa ambas máquinas (*.deb) en **VirtualBox**.</li>
+                    <li>En la configuración de red de ambas máquinas, selecciona el modo **Red Interna** (Internal Network).</li>
+                    <li>Asegúrate de que ambas máquinas están configuradas con las siguientes IPs estáticas **dentro del sistema operativo**:</li>
+                    <ul>
+                        <li>**Máquina Vulnerable:** IP: **10.33.206.2**</li>
+                        <li>**Máquina Atacante:** IP: **10.33.206.10**</li>
+                    </ul>
+                    <li>Una vez configuradas, la Máquina Atacante debería poder hacer ping a la Máquina Vulnerable.</li>
+                </ol>
+            </div>
 
-        <p><span class="prompt">$</span> exit</p>
-        <p class="file-entry">Cerrando sesión. ¡Que disfrutes la auditoría!</p>
-    </main>
+            <hr>
+            
+            <p><span class="prompt">$</span> ls -l /vulnerabilidades</p>
+            <p class="file-entry">Total: 5 vulnerabilidades significativas encontradas.</p>
+            
+            <ul class="vulnerability-list">
+                <li>
+                    <span class="file-entry">[ALTO]</span> <strong>Ataques de Diccionario</strong>
+                    <p class="description">Permite a un atacante intentar una gran cantidad de contraseñas predefinidas.</p>
+                </li>
+                <li>
+                    <span class="file-entry">[ALTO]</span> <strong>Ataques de Denegación de Servicio (DoS)</strong>
+                    <p class="description">Incluido para el aprendizaje de técnicas de defensa y ejecución. (Nota: No es una vulnerabilidad de software per se, sino una técnica de ataque incluida para la práctica).</p>
+                </li>
+                <li>
+                    <span class="file-entry">[ALTO]</span> <strong>Inyección de SQL y Exposición de Contraseñas</strong>
+                    <p class="description">La aplicación es vulnerable a Inyección de SQL, permitiendo la extracción de datos sensibles, incluyendo contraseñas.</p>
+                </li>
+                <li>
+                    <span class="file-entry">[ALTO]</span> <strong>Exposición de Información Sensible Por listado de subdirectorios</strong>
+                    <p class="description">Ciertos datos confidenciales (configuraciones, rutas, etc.) son accesibles sin la debida autenticación o protección.</p>
+                </li>
+                <li>
+                    <span class="file-entry">[ALTO]</span><strong>Usar la misma contraseña para múltiples servicios </strong>
+                    <p class="description">Las contraseñas se repiten para cada servicio (Wordpress, DVWA etc........) </p>
+                </li>
+            </ul>
+
+            <p><span class="prompt">$</span> exit</p>
+            <p class="file-entry">Cerrando sesión. ¡Que disfrutes la auditoría!</p>
+        </main>
+    </section>
 
     <footer class="terminal-output">
         <p><span class="prompt">$</span>&#169; 2026: Jaime Galvez Martinez _</p>
