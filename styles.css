@@ -6,6 +6,144 @@
  * para los botones visuales con estilo moderno.
  */
 
+
+.container {
+    display: flex;
+    gap: 30px; /* Espacio entre los dos botones principales */
+    margin-bottom: 25px;
+}
+
+/* --- Estilos Generales de Botón --- */
+
+.hacker-btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 5px currentColor; /* Sombra ligera al texto */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Necesario para los efectos de glitch */
+    background: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente oscuro */
+    border: 1px solid transparent; /* Inicialmente transparente, el borde de neón viene del box-shadow */
+}
+
+/* Efecto Hover (al pasar el ratón) */
+.hacker-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px currentColor, 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* --- Estilos de Color y Neón --- */
+
+/* Botón Rojo (Vulnerable) */
+.red-glitch {
+    color: #ff3366; /* Color de texto neón rojo */
+    box-shadow: 0 0 15px #ff3366, inset 0 0 5px #ff3366; /* Borde de neón rojo */
+}
+
+/* Botón Azul (Atacante) */
+.blue-glitch {
+    color: #33ccff; /* Color de texto neón azul */
+    box-shadow: 0 0 15px #33ccff, inset 0 0 5px #33ccff; /* Borde de neón azul */
+}
+
+/* Botón Verde (VirtualBox) */
+.green-glitch {
+    color: #00ff41; /* Color de texto neón verde */
+    box-shadow: 0 0 15px #00ff41, inset 0 0 5px #00ff41; /* Borde de neón verde */
+}
+
+/* --- Estilos de Texto y Separador --- */
+
+.info-text {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Efecto de resplandor verde en el texto */
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41; 
+}
+
+.single-btn {
+    margin-bottom: 30px;
+}
+
+.separator {
+    color: #444; /* Línea separadora gris oscuro */
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.section-title {
+    color: #fff; /* Título blanco brillante */
+    letter-spacing: 3px; /* Espaciado para dar un toque técnico */
+    text-shadow: 0 0 5px #fff;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 5px;
+}
+
+/* --- Animación de Glitch (Efecto distorsión) --- */
+
+/* Esta animación es compleja, da el efecto de que el borde parpadea/se distorsiona ligeramente */
+.hacker-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Inicialmente oculto */
+    opacity: 0;
+    pointer-events: none;
+    /* Animación */
+    animation: glitch-anim 6s infinite linear alternate;
+}
+
+/* Estilos específicos para la animación según el color */
+.red-glitch::before {
+    border: 3px solid #ff3366;
+}
+.blue-glitch::before {
+    border: 3px solid #33ccff;
+}
+.green-glitch::before {
+    border: 3px solid #00ff41;
+}
+
+@keyframes glitch-anim {
+    0% {
+        opacity: 0.8;
+        transform: translate(1px, -1px);
+    }
+    10% {
+        opacity: 0;
+        transform: translate(0);
+    }
+    20% {
+        opacity: 0.5;
+        transform: translate(-1px, 2px);
+    }
+    30% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.9;
+        transform: translate(2px, 1px);
+    }
+    50% {
+        opacity: 0;
+    }
+    /* El resto del tiempo se mantiene invisible */
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Estilo base para todos los botones de descarga */
 .visual-button {
     /* Convierte el enlace en un bloque para el diseño */
